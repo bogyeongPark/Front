@@ -1,4 +1,4 @@
-package seconLeftComponent;
+package rightComponent;
 
 import javax.swing.*;
 import java.awt.*;

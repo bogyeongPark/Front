@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.GroupLayout;
 import firstLeftComponent.*;
+import rightComponent.SetRightPanel;
 import seconLeftComponent.*;
 
 public class StScript extends JFrame {
@@ -11,10 +12,10 @@ public class StScript extends JFrame {
     }
 
     private void initComponents() {
-
+// setRightPanel 위치 제대로 정리하기 !
+// setRightPanel - body 변경해서 다른 화면도 만들기
         SetFirstLeftPanel firstLeft = new SetFirstLeftPanel();
         SetSecondLeftPanel secondLeft = new SetSecondLeftPanel();
-
         SetRightPanel right = new SetRightPanel();
 
         // 전체  레이아웃 - firstLeft, secondLeft, rightPanel
