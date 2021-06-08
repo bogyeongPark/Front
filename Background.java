@@ -10,16 +10,14 @@ public class Background extends JFrame {
     }
     public static JPanel secondLeftPanel = new JPanel();
     public static JPanel rightPanel = new JPanel();
+    public static SetHeaderFirst hFirst = new SetHeaderFirst("헤더라벨저기");
 
     public void initComponents() {
 
         SetFirstLeftPanel firstLeft = new SetFirstLeftPanel();
-        SetHeaderFirst hFirst = new SetHeaderFirst("헤더라벨적기");
-
         secondLeftPanel.setBackground(new Color(238, 241, 244));
         secondLeftPanel.setMinimumSize(new Dimension(242, 600));
         secondLeftPanel.setPreferredSize(new Dimension(242, 600));
-
 
         GroupLayout secondLeftPanelLayout = new GroupLayout(secondLeftPanel);
         secondLeftPanel.setLayout(secondLeftPanelLayout);
