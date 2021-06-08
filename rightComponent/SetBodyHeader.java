@@ -7,6 +7,7 @@ public class SetBodyHeader {
     public static JPanel bodyHeader = new JPanel();
     public static JLabel bodyHeaderFixIcon = new JLabel();
     public static JLabel bodyHeaderLabel = new JLabel();
+    
     public SetBodyHeader(String msg){
         bodyHeader.setBackground(new Color(255, 255, 255));
         bodyHeader.setPreferredSize(new Dimension(716, 81));

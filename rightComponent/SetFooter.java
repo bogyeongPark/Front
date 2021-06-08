@@ -9,9 +9,9 @@ public class SetFooter {
 
     public static JPanel footer = new JPanel();
 
-    public SetFooter(){
+    public SetFooter(String message){
         footer.setBackground(new Color(255, 255, 255));
-        SetFooterBtn fBtn =  new SetFooterBtn("테스트용");
+        SetFooterBtn fBtn =  new SetFooterBtn(message);
         fBtn.footerBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 footerBtnActionPerformed(evt);

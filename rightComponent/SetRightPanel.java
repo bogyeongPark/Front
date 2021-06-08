@@ -10,13 +10,13 @@ public class SetRightPanel {
         rightPanel.setMinimumSize(new Dimension(716, 600));
         rightPanel.setPreferredSize(new Dimension(716, 600));
 
-        //스터디룸은 body만 변경해주면 됨
+
         //Body Header관련
         SetBodyHeader hbody = new SetBodyHeader("테스트중");
+        //Body - Serfooter 파일에서 값 바꿔주면 됨
+        SetFooter foot = new SetFooter("테스트용");
         //Body Side 관련
         SetMemberPanel participants = new SetMemberPanel();
-        //Body - Serfooter 파일에서 값 바꿔주면 됨
-        SetFooter foot = new SetFooter();
         //Body 스터디룸에서 계속 본문 바뀌는 부분
         SetBody contentBody = new SetBody();
 
@@ -50,4 +50,5 @@ public class SetRightPanel {
         );
 
     }
+
 }
