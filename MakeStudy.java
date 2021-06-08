@@ -1,12 +1,12 @@
 import rightComponent.SetFooter;
-import rightComponent.SetRightPanel;
 import seconLeftComponent.SetHeaderFirst;
 
 import javax.swing.*;
-import javax.swing.JSeparator;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+//TODO 요소들 분리하기
 
 public class MakeStudy extends Background{
     JPanel loadTxtPanel,body,studyName,studyRule,studyTime,joinNumber,studyDetail;
@@ -253,6 +253,7 @@ public class MakeStudy extends Background{
         studyDurationLabel.setFont(new Font("돋움", 1, 14)); // NOI18N
         studyDurationLabel.setText("스터디 기간");
 
+        //TODO 스터디 기간 선택 라디오 버튼 모듈화하기 . 하나만 선택되도록 설정 필요.
         duration_4.setBackground(new Color(255, 255, 255));
         duration_4.setFont(new Font("돋움", 0, 11)); // NOI18N
         duration_4.setText("4주");
