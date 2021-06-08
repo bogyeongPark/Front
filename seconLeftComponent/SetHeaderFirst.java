@@ -39,4 +39,5 @@ public class SetHeaderFirst {
         headerLine.setMinimumSize(new Dimension(242, 10));
         headerLine.setPreferredSize(new Dimension(242, 10));
     }
+
 }

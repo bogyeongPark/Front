@@ -39,18 +39,10 @@ public class Explore extends Background{
 
         
         //@Override
-
-        //ExploreMenu추가하는거 잊지말기
          ExploreMenu searchMenu = new ExploreMenu();
          SetHeaderFirst hSearch = new SetHeaderFirst("찾기");
 //        StudyDetailDialog detail = new StudyDetailDialog();
-        secondLeftPanel = new JPanel();
-        
-        secondLeftPanel.setBackground(new Color(238, 241, 244));
-        secondLeftPanel.setMinimumSize(new Dimension(242, 600));
-        secondLeftPanel.setPreferredSize(new Dimension(242, 600));
-//
-//
+
         GroupLayout secondLeftPanelLayout = new GroupLayout(secondLeftPanel);
         secondLeftPanel.setLayout(secondLeftPanelLayout);
         secondLeftPanelLayout.setHorizontalGroup(
@@ -342,7 +334,7 @@ public class Explore extends Background{
                                         .addComponent(rightPanel, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
         );
-//
+
     }
 
     private void studyMoreActionPerformed(java.awt.event.ActionEvent evt) {
