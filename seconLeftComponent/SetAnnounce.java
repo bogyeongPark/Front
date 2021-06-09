@@ -3,6 +3,7 @@ package seconLeftComponent;
 import javax.swing.*;
 import java.awt.*;
 
+//공지 패널 레이아웃. 건들일 필요없음.
 public class SetAnnounce {
     public static JScrollPane announcePanel = new JScrollPane();
     public static  JLabel announceLabel = new JLabel();

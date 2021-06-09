@@ -6,6 +6,10 @@ import java.awt.event.ActionListener;
 
 public class SetPlusBtn {
     public static JButton plusBtn = new JButton();
+
+    //그룹 추가
+    // TODO MakeStudy로 이어지는 이벤트 버튼 연결 필요
+
     public SetPlusBtn(){
         plusBtn.setBackground(new Color(253, 253, 248));
         plusBtn.setForeground(new Color(253, 253, 248));

@@ -7,6 +7,14 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Explore extends Background{
+    JPanel banner,searchPanel,exploreView,studyIntro;
+    JLabel bannerImg,categoryVar,studyName,studyImg;
+    JTextField searchTextFiled;
+    JScrollPane explorePane;
+    JLayeredPane bannerLayer,studyPreview;
+    JTextPane studyIntroW;
+    JButton studyMore;
+
 
     public Explore() {
         super.initComponents();
@@ -14,13 +22,6 @@ public class Explore extends Background{
     }
 
     public void initComponents() {
-        JPanel banner,searchPanel,exploreView,studyIntro;
-        JLabel bannerImg,categoryVar,studyName,studyImg;
-        JTextField searchTextFiled;
-        JScrollPane explorePane;
-        JLayeredPane bannerLayer,studyPreview;
-        JTextPane studyIntroW;
-        JButton studyMore;
 
         bannerLayer = new JLayeredPane();
         banner = new JPanel();
@@ -42,6 +43,8 @@ public class Explore extends Background{
          ExploreMenu searchMenu = new ExploreMenu();
          SetHeaderFirst hSearch = new SetHeaderFirst("찾기");
 //        StudyDetailDialog detail = new StudyDetailDialog();
+
+        //secondLeftPanel 레이아웃
 
         GroupLayout secondLeftPanelLayout = new GroupLayout(secondLeftPanel);
         secondLeftPanel.setLayout(secondLeftPanelLayout);
@@ -161,6 +164,7 @@ public class Explore extends Background{
                                         .addContainerGap(44, Short.MAX_VALUE)))
         );
 
+        // 검색 결과 뜨는패널
         explorePane.setBackground(new Color(255, 255, 255));
         explorePane.setBorder(null);
         explorePane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -173,7 +177,10 @@ public class Explore extends Background{
         exploreView.setPreferredSize(new Dimension(716, 700));
 
         categoryVar.setFont(new Font("돋움", 1, 20)); // NOI18N
+
+        //TODO 카테고리 버튼 누르는 값에 따라 값 변화 필요
         categoryVar.setText("ALL");
+
         categoryVar.setToolTipText("");
         categoryVar.setHorizontalTextPosition(SwingConstants.RIGHT);
         categoryVar.setInheritsPopupMenu(false);
@@ -181,6 +188,10 @@ public class Explore extends Background{
         categoryVar.setMinimumSize(new Dimension(170, 57));
         categoryVar.setPreferredSize(new Dimension(170, 57));
 
+
+
+
+        //스터디 그룹 미리보기 패널
         studyPreview.setBorder(BorderFactory.createEtchedBorder());
         studyPreview.setMinimumSize(new Dimension(330, 270));
 
@@ -188,13 +199,20 @@ public class Explore extends Background{
         studyIntro.setMinimumSize(new Dimension(330, 145));
         studyIntro.setPreferredSize(new Dimension(330, 145));
 
+        //TODO 데이터 값에 따라 아래 StudyName.setText값 변경 필요.
+        //스터디그룹 미리보기 패널 - 스터디 이름
         studyName.setFont(new Font("돋움", 0, 14)); // NOI18N
         studyName.setText("2021-자바 개발 스터디");
         studyName.setPreferredSize(new Dimension(180, 20));
 
+        //TODO 데이터 값에 따라 아래 StudyIntroW.setText값 변경 필요.
+        //스터디그룹 미리보기 패널 - 스터디 소개 간략
         studyIntroW.setEditable(false);
         studyIntroW.setText("세 달 동안 Java를 사용해서 함께 앱 개발 스터디 하실 분 모집합니다. 매주 금요일마다 스터디 결과를 제출하도록 할 예정입니다.");
 
+
+        //TODO 데이터 값에 따라 아래 StudyMore 버튼누르면 해당 스터디 상세보기 패널로 이동
+        //스터디그룹 미리보기 패널 - 스터디 소개 간략
         studyMore.setBackground(new Color(238, 241, 244));
         studyMore.setText("더보기");
         studyMore.setBorder(null);
@@ -204,6 +222,7 @@ public class Explore extends Background{
             }
         });
 
+        //스터디 미리보기 전체 패널에 각 요소 붙여넣는 레이아웃
         GroupLayout studyIntroLayout = new GroupLayout(studyIntro);
         studyIntro.setLayout(studyIntroLayout);
         studyIntroLayout.setHorizontalGroup(
@@ -337,14 +356,14 @@ public class Explore extends Background{
 
     }
 
-    private void studyMoreActionPerformed(java.awt.event.ActionEvent evt) {
+    private void studyMoreActionPerformed(ActionEvent evt) {
         // TODO add your handling code here:
     }
-    private void footerBtnDialogActionPerformed(java.awt.event.ActionEvent evt) {
+    private void footerBtnDialogActionPerformed(ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-    private void searchTextFiledActionPerformed(java.awt.event.ActionEvent evt) {
+    private void searchTextFiledActionPerformed(ActionEvent evt) {
         // TODO add your handling code here:
     }
 

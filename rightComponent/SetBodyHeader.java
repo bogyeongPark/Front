@@ -7,16 +7,17 @@ public class SetBodyHeader {
     public static JPanel bodyHeader = new JPanel();
     public static JLabel bodyHeaderFixIcon = new JLabel();
     public static JLabel bodyHeaderLabel = new JLabel();
-    
+
+    //String msg로 각 rightPanel = body 헤더 텍스트 변경가능 - 오버라이딩
     public SetBodyHeader(String msg){
         bodyHeader.setBackground(new Color(255, 255, 255));
         bodyHeader.setPreferredSize(new Dimension(716, 81));
 
-        bodyHeaderFixIcon.setFont(new Font("돋움", 1, 30)); // NOI18N
+        bodyHeaderFixIcon.setFont(new Font("돋움", 1, 30));
         bodyHeaderFixIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bodyHeaderFixIcon.setText("#");
 
-        bodyHeaderLabel.setFont(new Font("돋움", 1, 30)); // NOI18N
+        bodyHeaderLabel.setFont(new Font("돋움", 1, 30));
         bodyHeaderLabel.setText(msg);
 
         GroupLayout bodyHeaderLayout = new GroupLayout(bodyHeader);

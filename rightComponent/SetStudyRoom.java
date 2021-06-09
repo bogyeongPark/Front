@@ -3,22 +3,25 @@ package rightComponent;
 import javax.swing.*;
 import java.awt.*;
 
-public class SetRightPanel {
+public class SetStudyRoom {
     public static JPanel rightPanel = new JPanel();
-    public SetRightPanel(){
+    public static SetBodyHeader hbody = new SetBodyHeader("1주차 과제함");
+    public static SetFooter foot = new SetFooter("과제 작성 하기");
+
+    // setStudyResult , 스터디 결과 작성페이지, 스터디 결과 상세보기 페이지 생성자로 만들어 연결
+    // TODO setBody를 이벤트에 맞게 변경시켜주면 됨.
+    public static SetStudyResult resultPre = new SetStudyResult();
+    public static JPanel content = resultPre.studyResultPanel;
+    public static SetBody contentBody = new SetBody(content);
+
+    public static SetMemberPanel participants = new SetMemberPanel();
+
+    //그룹 화면 레이아웃. 변경할 필요없음
+    public SetStudyRoom(){
+
         rightPanel.setBackground(new Color(255, 255, 255));
         rightPanel.setMinimumSize(new Dimension(716, 600));
         rightPanel.setPreferredSize(new Dimension(716, 600));
-
-
-        //Body Header관련
-        SetBodyHeader hbody = new SetBodyHeader("테스트중");
-        //Body - Serfooter 파일에서 값 바꿔주면 됨
-        SetFooter foot = new SetFooter("테스트용");
-        //Body Side 관련
-        SetMemberPanel participants = new SetMemberPanel();
-        //Body 스터디룸에서 계속 본문 바뀌는 부분
-        SetBody contentBody = new SetBody();
 
         GroupLayout rightPanelLayout = new GroupLayout(rightPanel);
         rightPanel.setLayout(rightPanelLayout);
@@ -43,9 +46,9 @@ public class SetRightPanel {
                                                 .addGap(6, 6, 6)
                                                 .addComponent(participants.memberPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                         .addGroup(rightPanelLayout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(contentBody.bodyPanel, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(foot.footer, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
         );
 

@@ -10,6 +10,7 @@ public class SetFooter {
     public static JPanel footer = new JPanel();
     public static JButton footerBtn = new JButton();
 
+    //rightPanel - foooter 부분. String message로 버튼 글자 변경가능
     public SetFooter(String message){
         footer.setBackground(new Color(255, 255, 255));
         footerBtn.setBackground(new Color(238, 241, 244));
@@ -19,12 +20,15 @@ public class SetFooter {
         footerBtn.setMaximumSize(new Dimension(350, 50));
         footerBtn.setMinimumSize(new Dimension(350, 50));
         footerBtn.setPreferredSize(new Dimension(350, 50));
+
+        //TODO footerBtn 이벤트 작성 필요
         footerBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 footerBtnActionPerformed(evt);
             }
         });
 
+        // 푸터 레이아웃 설정 부분 . 변경 필요없음.
         GroupLayout footerLayout = new GroupLayout(footer);
         footer.setLayout(footerLayout);
         footerLayout.setHorizontalGroup(

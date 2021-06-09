@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SetFirstLeftPanel {
+    //firstLeftPanel의 큰 틀. 코드 작성 필요없음.
     public static JPanel firstLeftPanel = new JPanel();
     public SetFirstLeftPanel(){
         firstLeftPanel.setBackground(new Color(230, 235, 244));
@@ -15,6 +16,7 @@ public class SetFirstLeftPanel {
         SetExploreBtn expl = new SetExploreBtn();
         SetGroupPanel studygroup = new SetGroupPanel();
 
+        // firstLeftPanel 레이아웃, 코드 추가 필요없음
         GroupLayout firstLeftPanelLayout = new GroupLayout(firstLeftPanel);
         firstLeftPanel.setLayout(firstLeftPanelLayout);
         firstLeftPanelLayout.setHorizontalGroup(

@@ -14,6 +14,7 @@ public class Background extends JFrame {
 
     public void initComponents() {
 
+        //두번째 패널 레이아웃 건들필요없음.
         SetFirstLeftPanel firstLeft = new SetFirstLeftPanel();
         secondLeftPanel.setBackground(new Color(238, 241, 244));
         secondLeftPanel.setMinimumSize(new Dimension(242, 600));
@@ -39,6 +40,7 @@ public class Background extends JFrame {
                                 .addContainerGap(505, Short.MAX_VALUE))
         );
 
+        //rightPanel레이아웃
         rightPanel.setBackground(new Color(255, 255, 255));
         rightPanel.setMinimumSize(new Dimension(716, 600));
         rightPanel.setPreferredSize(new Dimension(716, 600));

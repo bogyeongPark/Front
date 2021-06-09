@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 public class SetMyBtn {
     public static JButton myBtn = new JButton();
 
+    //TODO 버튼 이벤트 코드 작성 필요
+
+    //홈 버튼 레이아웃
     public SetMyBtn(){
         myBtn.setBackground(new java.awt.Color(253, 253, 248));
         myBtn.setForeground(new java.awt.Color(253, 253, 248));

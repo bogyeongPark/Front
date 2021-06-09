@@ -2,21 +2,19 @@ import javax.swing.*;
 import java.awt.*;
 import javax.swing.GroupLayout;
 import firstLeftComponent.*;
-import rightComponent.SetRightPanel;
+import rightComponent.SetStudyRoom;
 import seconLeftComponent.*;
 
-public class StScript extends JFrame {
+public class StudyRoom extends JFrame {
+    public static SetFirstLeftPanel firstLeft = new SetFirstLeftPanel();
+    public static SetSecondLeftPanel secondLeft = new SetSecondLeftPanel();
+    public static SetStudyRoom right = new SetStudyRoom();
 
-    public StScript() {
+    public StudyRoom() {
         initComponents();
     }
 
-    private void initComponents() {
-// setRightPanel 위치 제대로 정리하기 !
-// setRightPanel - body 변경해서 다른 화면도 만들기
-        SetFirstLeftPanel firstLeft = new SetFirstLeftPanel();
-        SetSecondLeftPanel secondLeft = new SetSecondLeftPanel();
-        SetRightPanel right = new SetRightPanel();
+    public void initComponents() {
 
         // 전체  레이아웃 - firstLeft, secondLeft, rightPanel
         GroupLayout layout = new GroupLayout(getContentPane());
@@ -49,7 +47,7 @@ public class StScript extends JFrame {
 
 
     public static void main(String args[]) {
-        new StScript();
+        new StudyRoom();
     }
 
 }

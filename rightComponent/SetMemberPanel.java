@@ -10,9 +10,15 @@ public class SetMemberPanel {
     public static JLabel memberYesLabel = new JLabel();
     public static JScrollPane memberYesPanel = new JScrollPane();
     public static JScrollPane memberNoPanel = new JScrollPane();
-    //뭔가 이상한데?
+
+    // 참여자 목록 생성자로 불러오고
     public static JList<String> memYesList = new SetMemberList().memberYesList;
     public static JList<String> memNoList = new SetMemberList().memberNoList;
+    // TODO 리스트에 있는 값에 따라 바뀌도록 이벤트 설정해야함
+    public static SetMemPercent memPercent = new SetMemPercent();
+
+
+    // 참여자 목록 패널 레이아웃. 건들필요없음.
     public SetMemberPanel(){
         memberPanel.setBackground(new Color(238, 241, 244));
 
@@ -20,8 +26,7 @@ public class SetMemberPanel {
         memberFixedLabel.setFont(new Font("돋움", 1, 20));
         memberFixedLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         memberFixedLabel.setText("제출현황");
-        //리스트에 있는 값에 따라 바뀌도록 이벤트 설정해야함
-        SetMemPercent memPercent = new SetMemPercent();
+
         memberYesLabel.setFont(new Font("돋움", 1, 20));
         memberYesLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         memberYesLabel.setText("제출");

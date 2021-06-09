@@ -13,27 +13,26 @@ public class ExploreMenu{
 
     public ExploreMenu(){
 
+        //그룹 찾기 메뉴 레이아웃. 건들필요없음. 아래 이벤트만 편집.
         exploreMenu.setBackground(new Color(238, 241, 244));
         exploreMenu.setPreferredSize(new Dimension(226, 180));
         exploreMenu.setVisible(true);
 
-        // TODO 버튼 클래서 만들어서 오버로딩해서 코드 간결화시키기!
-        allBtn.setBackground(new java.awt.Color(64, 80, 255));
-        allBtn.setFont(new java.awt.Font("돋움", 1, 24)); // NOI18N
-        allBtn.setIcon(new javax.swing.ImageIcon("../img/img/explore_simple.png")); // NOI18N
+        //그룹 전체 보기
+        allBtn.setBackground(new Color(64, 80, 255));
+        allBtn.setFont(new Font("돋움", 1, 24)); // NOI18N
+        allBtn.setIcon(new javax.swing.ImageIcon("../img/explore_simple.png")); // NOI18N
         allBtn.setText("ALL");
         allBtn.setAutoscrolls(true);
         allBtn.setBorder(null);
         allBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         allBtn.setIconTextGap(15);
-        allBtn.setPreferredSize(new java.awt.Dimension(226, 40));
-        allBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        allBtn.setPreferredSize(new Dimension(226, 40));
+        allBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
                 allBtnActionPerformed(evt);
             }
         });
-
-
 
         devBtn.setBackground(new Color(238, 241, 244));
         devBtn.setFont(new Font("돋움", 1, 24)); // NOI18N

@@ -11,7 +11,8 @@ public class SetSecondLeftPanel {
         secondLeftPanel.setMinimumSize(new Dimension(242, 600));
         secondLeftPanel.setPreferredSize(new Dimension(242, 600));
 
-        SetHeaderFirst hFirst = new SetHeaderFirst("헤러라벨적기");
+        //TODO 버튼에 맞게 헤더 부분이 변화필요
+        SetHeaderFirst hFirst = new SetHeaderFirst("헤더라벨적기");
 
         //공지, 과제, 대화 채널의 구조는 같음 - 리팩토링 필요함
         SetAnnounce noti = new SetAnnounce();
@@ -19,6 +20,7 @@ public class SetSecondLeftPanel {
         SetTalkCh talk = new SetTalkCh();
 
 
+        //레이아웃/.건들필요없음
         GroupLayout secondLeftPanelLayout = new GroupLayout(secondLeftPanel);
         secondLeftPanel.setLayout(secondLeftPanelLayout);
         secondLeftPanelLayout.setHorizontalGroup(

@@ -8,6 +8,7 @@ public class SetMemberList{
     public static JList<String> memberYesList = new JList<>();
 
     public SetMemberList(){
+        //스터디 제출 멤버 리스트 레이아웃
         // memberList로 하나 세팅 해놔서 yes,no에 다 적용시키고 싶음...리팩토링 필요
         memberYesList.setBackground(new Color(238, 241, 244));
         memberYesList.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -24,7 +25,7 @@ public class SetMemberList{
         memberNoList.setEnabled(false);
         memberNoList.setFocusable(false);
 
-        //이부분만 다름
+        //TODO String string - 데이터베이스와 연결 필요
         memberYesList.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "김스터디", "이스터디", "강스터디", "최스터디" };
             public int getSize() { return strings.length; }

@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class SetHeaderFirst {
+    //secondLeftPanel의 헤더 - firstLeftPanel에 있는 버튼을 클릭했을때 값이 변경됨.
     public static JPanel headerFirst = new JPanel();
     public static JSeparator headerLine = new JSeparator();
     public static JLabel headerFirstLabel = new JLabel();
